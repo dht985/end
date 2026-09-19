@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>建设历程 · 海疆纵横</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="offline-banner">⚠️ 当前处于离线（断网）状态：本站所有资源已本地化，可继续浏览。</div>
+
+<nav class="navbar navbar-expand-lg top-nav">
+  <div class="container">
+    <a class="navbar-brand text-white" href="index.html"><span class="ship-icon">⚓</span>海疆纵横</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首页看板</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">建设历程</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipment.html">装备型号</a></li>
+        <li class="nav-item"><a class="nav-link" href="stats.html">数据可视化</a></li>
+        <li class="nav-item"><a class="nav-link" href="three-d/showcase.html">三维舰船</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="badge-era">模块一 · 建设历程</span>
+    <h1>从白马庙到深蓝：海军建设时间线</h1>
+    <p class="sub">按年代梳理中国海军的重大节点，点击时间线条目可在右侧查看详情；可按类别筛选。</p>
+  </div>
+</section>
+
+<main class="container py-4">
+  <div class="filter-bar" id="tagBar">
+    <label>类别筛选：</label>
+    <span class="spinner" id="filter-loading" style="display:none"></span>
+  </div>
+
+  <div class="kanban-board">
+    <div class="col-span-7">
+      <div class="card">
+        <div class="card-header"><span class="dot"></span>历程时间线（<span id="tl-count">0</span> 条）</div>
+        <div class="card-body"><div id="timeline" class="timeline"></div></div>
+      </div>
+    </div>
+    <div class="col-span-5">
+      <div class="card">
+        <div class="card-header"><span class="dot" style="background:var(--signal)"></span>节点详情</div>
+        <div class="card-body" id="tl-detail">
+          <div class="state-tip"><span class="emoji">👆</span>点击左侧任意节点查看详情</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container">海疆纵横 · 建设历程模块</div></footer>
+
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>
