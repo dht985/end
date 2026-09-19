@@ -1,0 +1,8 @@
+# 开发辅助脚本（不入库）
+gitcommit.ps1
+_dbg_*
+
+# 系统
+Thumbs.db
+.DS_Store
+*.tmp
