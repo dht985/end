@@ -109,10 +109,13 @@
   </div>
 </footer>
 
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/common.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="js/common.js" defer></script>
 <script>
-/* 首页：加载 data.json 渲染统计与预览 */
+/* 首页：加载 data.json 渲染统计与预览
+   注：外链脚本已加 defer（解析完后、DOMContentLoaded 前按序执行），
+   内联脚本加 defer 无效，故包一层 DOMContentLoaded 以保证 common.js 已就绪 */
+document.addEventListener('DOMContentLoaded', function () {
 (function () {
   const previewEl = document.getElementById('timeline-preview');
   const eqEl = document.getElementById('eq-preview');
@@ -168,6 +171,7 @@
     }).join('');
   };
 })();
+});
 </script>
 </body>
 </html>

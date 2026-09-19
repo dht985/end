@@ -99,7 +99,8 @@
   <a-sphere position="18 0.5 10" radius="0.4" color="#2a9d8f"></a-sphere>
 </a-scene>
 
+<!-- A-Frame 保持同步加载：实测 defer 会使场景初始化延后（DCL +22ms），场景页无内容可先渲染，defer 无收益 -->
 <script src="libs/aframe.min.js"></script>
-<script src="../js/common.js"></script>
+<script src="../js/common.js" defer></script>
 </body>
 </html>
