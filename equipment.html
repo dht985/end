@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>装备型号 · 海疆纵横</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="offline-banner">⚠️ 当前处于离线（断网）状态：本站所有资源已本地化，可继续浏览。</div>
+
+<nav class="navbar navbar-expand-lg top-nav">
+  <div class="container">
+    <a class="navbar-brand text-white" href="index.html"><span class="ship-icon">⚓</span>海疆纵横</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首页看板</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">建设历程</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipment.html">装备型号</a></li>
+        <li class="nav-item"><a class="nav-link" href="stats.html">数据可视化</a></li>
+        <li class="nav-item"><a class="nav-link" href="three-d/showcase.html">三维舰船</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="badge-era">模块二 · 装备型号</span>
+    <h1>代表性装备型号一览</h1>
+    <p class="sub">航空母舰、驱逐舰、护卫舰、核潜艇、两栖攻击舰、综合补给舰——覆盖六大舰种，支持舰种、年代与名称筛选。</p>
+  </div>
+</section>
+
+<main class="container py-4">
+  <div class="filter-bar">
+    <div><label>舰种</label>
+      <select id="f-type"><option value="">全部</option></select>
+    </div>
+    <div><label>年代</label>
+      <select id="f-era"><option value="">全部</option></select>
+    </div>
+    <div><label>关键词</label>
+      <input id="f-keyword" type="text" placeholder="舰名/舷号">
+    </div>
+    <button class="btn-reset" id="btn-reset">重置</button>
+    <span class="ms-auto" id="eq-count" style="color:var(--muted);font-size:.88rem;"></span>
+  </div>
+
+  <div id="eq-list" class="eq-grid"></div>
+</main>
+
+<footer class="site-footer"><div class="container">海疆纵横 · 装备型号模块</div></footer>
+
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/equipment.js"></script>
+</body>
+</html>
