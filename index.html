@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海疆纵横 · 首页看板</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="offline-banner">⚠️ 当前处于离线（断网）状态：本站所有资源已本地化，可继续浏览；数据图表依赖本地 data.json。</div>
+
+<nav class="navbar navbar-expand-lg top-nav">
+  <div class="container">
+    <a class="navbar-brand text-white" href="index.html">
+      <span class="ship-icon">⚓</span>海疆纵横
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首页看板</a></li>
+        <li class="nav-item"><a class="nav-link" href="history.html">建设历程</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipment.html">装备型号</a></li>
+        <li class="nav-item"><a class="nav-link" href="stats.html">数据可视化</a></li>
+        <li class="nav-item"><a class="nav-link" href="three-d/showcase.html">三维舰船</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="badge-era">期末大作业原型 · 看板风格</span>
+    <h1>中国海军建设历程与代表性装备</h1>
+    <p class="sub">从 1949 年白马庙建军到航母编队走向深蓝，本看板以历程、装备、数据、三维四个维度，串联展示中国海军 70 余年的跨越发展。</p>
+  </div>
+</section>
+
+<main class="container py-4">
+  <!-- 统计概览 -->
+  <div class="kanban-board mb-4">
+    <div class="col-span-3 stat-card"><span class="stat-icon">🎖️</span>
+      <div class="stat-num" id="s-year">1949</div>
+      <div class="stat-label">海军成立年份</div>
+    </div>
+    <div class="col-span-3 stat-card red"><span class="stat-icon">🚢</span>
+      <div class="stat-num" id="s-eq">12</div>
+      <div class="stat-label">代表性装备型号</div>
+    </div>
+    <div class="col-span-3 stat-card gold"><span class="stat-icon">📜</span>
+      <div class="stat-num" id="s-ms">14</div>
+      <div class="stat-label">重大历程节点</div>
+    </div>
+    <div class="col-span-3 stat-card ok"><span class="stat-icon">⚙️</span>
+      <div class="stat-num" id="s-type">6</div>
+      <div class="stat-label">主要舰种分类</div>
+    </div>
+  </div>
+
+  <!-- 历程预览 -->
+  <div class="kanban-board mb-4">
+    <div class="col-span-8 card">
+      <div class="card-header"><span class="dot"></span>建设历程 · 关键节点速览</div>
+      <div class="card-body" id="timeline-preview"></div>
+      <div class="card-footer text-end bg-transparent border-0 pb-3">
+        <a href="history.html" class="btn btn-sm" style="background:var(--navy-700);color:#fff;">进入历程模块 →</a>
+      </div>
+    </div>
+    <div class="col-span-4 card">
+      <div class="card-header"><span class="dot" style="background:var(--signal)"></span>本看板导航</div>
+      <div class="card-body">
+        <div class="list-group list-group-flush">
+          <a href="history.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            建设历程 <span class="badge bg-primary rounded-pill">时间线</span>
+          </a>
+          <a href="equipment.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            装备型号 <span class="badge bg-info rounded-pill">卡片+筛选</span>
+          </a>
+          <a href="stats.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            数据可视化 <span class="badge bg-success rounded-pill">ECharts</span>
+          </a>
+          <a href="three-d/showcase.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            三维舰船 <span class="badge bg-warning text-dark rounded-pill">A-Frame</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 装备预览 -->
+  <div class="card mb-4">
+    <div class="card-header"><span class="dot" style="background:var(--gold)"></span>代表性装备 · 精选</div>
+    <div class="card-body">
+      <div class="eq-grid" id="eq-preview"></div>
+      <div class="text-end mt-3">
+        <a href="equipment.html" class="btn btn-sm" style="background:var(--navy-700);color:#fff;">查看全部装备 →</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    海疆纵横 · 中国海军建设历程与装备展示中心 &nbsp;|&nbsp;
+    数据来源：公开资料整理（仅作学习展示） &nbsp;|&nbsp;
+    <a href="README.md">README</a>
+  </div>
+</footer>
+
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+/* 首页：加载 data.json 渲染统计与预览 */
+(function () {
+  const previewEl = document.getElementById('timeline-preview');
+  const eqEl = document.getElementById('eq-preview');
+  renderState(previewEl, 'loading');
+  renderState(eqEl, 'loading');
+
+  loadNavyData('data/navy-data.json').then(function (r) {
+    if (!r.ok) { renderState(previewEl, 'error'); renderState(eqEl, 'error'); return; }
+    const d = r.data;
+    /* 统计数字 */
+    document.getElementById('s-year').textContent = d.summary.foundedYear;
+    document.getElementById('s-eq').textContent = d.equipment.length;
+    document.getElementById('s-ms').textContent = d.history.length;
+    document.getElementById('s-type').textContent = d.summary.shipTypes;
+
+    /* 时间线预览（取前 6 条） */
+    const tl = d.history.slice(0, 6).map(function (h) {
+      return '<div class="tl-item ' + (h.major ? 'major' : '') + '">' +
+        '<div class="tl-year">' + h.year + '</div>' +
+        '<div class="tl-title">' + h.title + '</div>' +
+        '<div class="tl-desc">' + h.desc + '</div>' +
+        '<span class="tl-tag">' + h.tag + '</span></div>';
+    }).join('');
+    previewEl.innerHTML = '<div class="timeline">' + tl + '</div>';
+
+    /* 装备预览（取 4 艘） */
+    renderEquipmentCards(eqEl, d.equipment.slice(0, 4));
+  });
+
+  /* 简易舰船 SVG（按 icon 类型） */
+  function shipSvg(kind) {
+    const c = { carrier:'#e63946', destroyer:'#1f6f9e', frigate:'#2a9d8f', submarine:'#6c5ce7', amphibious:'#f4a261', support:'#7f8c8d' }[kind] || '#1f6f9e';
+    if (kind === 'carrier') {
+      return '<svg class="ship-svg" width="180" height="60" viewBox="0 0 180 60"><rect x="20" y="28" width="140" height="14" rx="3" fill="#0a2540"/><polygon points="20,28 10,42 170,42 160,28" fill="#0d3b66"/><rect x="70" y="12" width="50" height="16" fill="' + c + '"/><rect x="88" y="4" width="14" height="8" fill="#e63946"/></svg>';
+    }
+    if (kind === 'submarine') {
+      return '<svg class="ship-svg" width="180" height="60" viewBox="0 0 180 60"><ellipse cx="90" cy="38" rx="70" ry="12" fill="#0d3b66"/><rect x="80" y="22" width="20" height="16" fill="' + c + '"/><line x1="90" y1="22" x2="90" y2="10" stroke="#0a2540" stroke-width="3"/></svg>';
+    }
+    return '<svg class="ship-svg" width="180" height="60" viewBox="0 0 180 60"><polygon points="30,30 150,30 165,42 15,42" fill="#0a2540"/><rect x="55" y="18" width="70" height="12" fill="#0d3b66"/><rect x="85" y="8" width="10" height="10" fill="' + c + '"/></svg>';
+  }
+
+  window.renderEquipmentCards = function (el, list) {
+    if (!list.length) { renderState(el, 'empty'); return; }
+    el.innerHTML = list.map(function (e) {
+      return '<div class="eq-card ' + e.type + '">' +
+        '<div class="eq-visual"><span class="eq-type">' + e.typeName + '</span>' + shipSvg(e.icon) + '</div>' +
+        '<div class="eq-body">' +
+        '<div class="eq-name">' + e.name + ' <small>(' + e.hullNo + ')</small></div>' +
+        '<div class="eq-meta">' + e.year + '年 · ' + e.era + '年代</div>' +
+        '<div class="eq-specs"><div><b>排水量</b>' + e.displacement + '</div><div><b>长度</b>' + e.length + '</div></div>' +
+        '<div class="eq-specs" style="margin-top:6px;color:var(--muted)">' + e.feature + '</div>' +
+        '</div></div>';
+    }).join('');
+  };
+})();
+</script>
+</body>
+</html>
