@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "海疆纵横 · 中国海军建设历程与代表性装备",
+    "source": "公开资料整理（中国海军官方发布、中国军网、Wikipedia 公开条目），仅作学习展示",
+    "updated": "2026-09"
+  },
+  "summary": {
+    "foundedYear": 1949,
+    "foundedDate": "1949-04-23",
+    "serviceName": "中国人民解放军海军",
+    "equipmentCount": 12,
+    "milestoneCount": 14,
+    "shipTypes": 6
+  },
+  "history": [
+    { "year": "1949", "title": "华东军区海军成立", "desc": "4月23日，华东军区海军在江苏泰州白马庙成立，这一天后被确定为中国人民解放军海军成立日。", "tag": "奠基", "major": true },
+    { "year": "1950", "title": "海军领导机关组建", "desc": "中央军委海军领导机关在北京正式成立，萧劲光任司令员，海军成为独立军种。", "tag": "建制" },
+    { "year": "1954", "title": "引进驱逐舰与鱼雷艇", "desc": "从苏联引进4艘07型驱逐舰（鞍山级），组建第一支驱逐舰部队，奠定近海防御基础。", "tag": "装备" },
+    { "year": "1974", "title": "第一艘核潜艇入列", "desc": "长征1号（091型）攻击核潜艇正式编入海军序列，中国成为世界第五个拥有核潜艇的国家。", "tag": "核力量", "major": true },
+    { "year": "1980", "title": "580任务远洋护航", "desc": "海军编队远赴南太平洋为洲际导弹试验护航，首次组织远洋航行与综合补给，标志海军走向远海。", "tag": "远海" },
+    { "year": "1988", "title": "南沙海战与水下发射", "desc": "3月14日南沙赤瓜礁海战；9月核潜艇水下发射运载火箭成功，海基核力量成型。", "tag": "核力量", "major": true },
+    { "year": "1994", "title": "052型哈尔滨舰服役", "desc": "国产第二代导弹驱逐舰哈尔滨舰（112）入列，引入综合指挥系统与燃气轮机，被誉为“中华第一舰”。", "tag": "装备" },
+    { "year": "2003", "title": "052C兰州舰下水", "desc": "首艘装备有源相控阵雷达与垂直发射系统的兰州舰（170）下水，被称为“中华神盾”。", "tag": "装备", "major": true },
+    { "year": "2008", "title": "亚丁湾护航", "desc": "海军首批护航编队赴亚丁湾、索马里海域执行护航任务，常态化维护国际海上通道安全。", "tag": "远海" },
+    { "year": "2012", "title": "辽宁舰入列", "desc": "中国第一艘航空母舰辽宁舰（16）正式交接入列，海军迈入航母时代。", "tag": "航母", "major": true },
+    { "year": "2019", "title": "山东舰服役", "desc": "首艘国产航空母舰山东舰（17）在三亚交付，中国成为世界少数能自建航母的国家。", "tag": "航母", "major": true },
+    { "year": "2020", "title": "055型南昌舰入列", "desc": "万吨级驱逐舰南昌舰（101）服役，055型是中国海军第四代驱逐舰，具备强大综合作战能力。", "tag": "装备", "major": true },
+    { "year": "2021", "title": "075型海南舰入列", "desc": "首艘两栖攻击舰海南舰（31）服役，补齐两栖登陆作战力量短板，立体投送能力跃升。", "tag": "两栖" },
+    { "year": "2022", "title": "福建舰下水", "desc": "中国第三艘、首艘弹射型航母福建舰（18）下水，配备电磁弹射与阻拦装置，综合性能显著提升。", "tag": "航母", "major": true }
+  ],
+  "equipment": [
+    {
+      "name": "辽宁舰",
+      "hullNo": "16",
+      "type": "carrier",
+      "typeName": "航空母舰",
+      "year": 2012,
+      "era": "2010s",
+      "displacement": "6.0万吨",
+      "length": "304m",
+      "propulsion": "蒸汽轮机",
+      "feature": "中国首艘航母，滑跃起飞，由未完工的瓦良格号续建而成。",
+      "icon": "carrier"
+    },
+    {
+      "name": "山东舰",
+      "hullNo": "17",
+      "type": "carrier",
+      "typeName": "航空母舰",
+      "year": 2019,
+      "era": "2010s",
+      "displacement": "约6.5万吨",
+      "length": "305m",
+      "propulsion": "蒸汽轮机",
+      "feature": "首艘国产航母，优化舰岛与机库布局，舰载机搭载量提升。",
+      "icon": "carrier"
+    },
+    {
+      "name": "福建舰",
+      "hullNo": "18",
+      "type": "carrier",
+      "typeName": "航空母舰",
+      "year": 2022,
+      "era": "2020s",
+      "displacement": "约8万吨",
+      "length": "约320m",
+      "propulsion": "蒸汽轮机",
+      "feature": "首艘弹射型国产航母，配备电磁弹射与阻拦装置。",
+      "icon": "carrier"
+    },
+    {
+      "name": "南昌舰",
+      "hullNo": "101",
+      "type": "destroyer",
+      "typeName": "驱逐舰",
+      "year": 2020,
+      "era": "2020s",
+      "displacement": "约1.2万吨",
+      "length": "约180m",
+      "propulsion": "全燃联合",
+      "feature": "055型万吨大驱首舰，双波段相控阵雷达，112单元通用垂发。",
+      "icon": "destroyer"
+    },
+    {
+      "name": "昆明舰",
+      "hullNo": "172",
+      "type": "destroyer",
+      "typeName": "驱逐舰",
+      "year": 2014,
+      "era": "2010s",
+      "displacement": "约7500吨",
+      "length": "约157m",
+      "propulsion": "柴燃交替",
+      "feature": "052D型首舰，通用垂直发射系统，有源相控阵雷达。",
+      "icon": "destroyer"
+    },
+    {
+      "name": "兰州舰",
+      "hullNo": "170",
+      "type": "destroyer",
+      "typeName": "驱逐舰",
+      "year": 2005,
+      "era": "2000s",
+      "displacement": "约7000吨",
+      "length": "约155m",
+      "propulsion": "柴燃交替",
+      "feature": "052C型首舰，“中华神盾”，圆环形相控阵雷达。",
+      "icon": "destroyer"
+    },
+    {
+      "name": "徐州舰",
+      "hullNo": "530",
+      "type": "frigate",
+      "typeName": "护卫舰",
+      "year": 2008,
+      "era": "2000s",
+      "displacement": "约4200吨",
+      "length": "约134m",
+      "propulsion": "全柴联合",
+      "feature": "054A型首舰，32单元垂直发射系统，反潜能力突出。",
+      "icon": "frigate"
+    },
+    {
+      "name": "蚌埠舰",
+      "hullNo": "582",
+      "type": "frigate",
+      "typeName": "护卫舰",
+      "year": 2013,
+      "era": "2010s",
+      "displacement": "约1400吨",
+      "length": "约89m",
+      "propulsion": "全柴联合",
+      "feature": "056型轻型护卫舰首舰，近海防御主力，造价低数量大。",
+      "icon": "frigate"
+    },
+    {
+      "name": "长征10号",
+      "hullNo": "412",
+      "type": "submarine",
+      "typeName": "核潜艇",
+      "year": 2016,
+      "era": "2010s",
+      "displacement": "约1.1万吨（水下）",
+      "length": "约135m",
+      "propulsion": "核动力",
+      "feature": "094型战略核潜艇，搭载潜射弹道导弹，海基核威慑骨干。",
+      "icon": "submarine"
+    },
+    {
+      "name": "长征7号",
+      "hullNo": "407",
+      "type": "submarine",
+      "typeName": "核潜艇",
+      "year": 2006,
+      "era": "2000s",
+      "displacement": "约7000吨（水下）",
+      "length": "约110m",
+      "propulsion": "核动力",
+      "feature": "093型攻击核潜艇，水下续航与静音性能较前代大幅提升。",
+      "icon": "submarine"
+    },
+    {
+      "name": "海南舰",
+      "hullNo": "31",
+      "type": "amphibious",
+      "typeName": "两栖攻击舰",
+      "year": 2021,
+      "era": "2020s",
+      "displacement": "约4万吨",
+      "length": "约237m",
+      "propulsion": "全柴联合",
+      "feature": "075型首舰，全通飞行甲板，可搭载直升机与两栖登陆装备。",
+      "icon": "amphibious"
+    },
+    {
+      "name": "呼伦湖舰",
+      "hullNo": "965",
+      "type": "support",
+      "typeName": "综合补给舰",
+      "year": 2017,
+      "era": "2010s",
+      "displacement": "约4.8万吨",
+      "length": "约240m",
+      "propulsion": "全柴联合",
+      "feature": "901型大型综合补给舰，为航母编队提供远洋伴随补给。",
+      "icon": "support"
+    }
+  ],
+  "stats": {
+    "shipCountByEra": [
+      { "era": "1950s", "count": 2 },
+      { "era": "1970s", "count": 1 },
+      { "era": "1980s", "count": 1 },
+      { "era": "1990s", "count": 1 },
+      { "era": "2000s", "count": 3 },
+      { "era": "2010s", "count": 6 },
+      { "era": "2020s", "count": 4 }
+    ],
+    "displacementByType": [
+      { "type": "航空母舰", "value": 68000 },
+      { "type": "两栖攻击舰", "value": 40000 },
+      { "type": "综合补给舰", "value": 48000 },
+      { "type": "驱逐舰", "value": 12000 },
+      { "type": "核潜艇", "value": 11000 },
+      { "type": "护卫舰", "value": 4200 }
+    ],
+    "typeComposition": [
+      { "type": "航空母舰", "value": 3 },
+      { "type": "驱逐舰", "value": 3 },
+      { "type": "护卫舰", "value": 2 },
+      { "type": "核潜艇", "value": 2 },
+      { "type": "两栖攻击舰", "value": 1 },
+      { "type": "综合补给舰", "value": 1 }
+    ]
+  }
+}
