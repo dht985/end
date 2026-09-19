@@ -4,6 +4,7 @@
 **自查人**：本人
 **自查日期**：2026-09-19
 **自查依据**：课程质量清单（三档宽度、断网、空数据、Console）
+**截图说明**：所有证据截图均为全屏整页截图（full page），另附 [history-1280.png](../screenshots/history-1280.png)、[equipment-1280.png](../screenshots/equipment-1280.png) 两张模块整页截图
 
 ---
 
