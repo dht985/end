@@ -1,15 +1,28 @@
-=== Console 自查记录 ===
+=== Console 自查记录（favicon 修复后重新验证）===
 遍历页面：index / history / equipment / stats / three-d/showcase
 
-全部 Console 输出（含 A-Frame 版本 info）：
+--- index.html ---
+>> 本页错误数：0
+
+--- history.html ---
+>> 本页错误数：0
+
+--- equipment.html ---
+>> 本页错误数：0
+
+--- stats.html ---
+>> 本页错误数：0
+
+--- three-d/showcase.html ---
 [debug] %cA-Frame:warn %cPut the A-Frame <script> tag in the <head> of the HTML *before* the scene to ensure everything for A-Frame is properly registered before they are used from HTML.%c  color: orange color: inherit color: orange
 [log] A-Frame Version: 1.8.0 (Date 2026-06-23, Commit #47a08f1c)
 [log] THREE Version (https://github.com/supermedium/three.js): 184
-[warning] [.WebGL-0x117402724800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[warning] [.WebGL-0x117402724800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[warning] [.WebGL-0x117402724800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[warning] [.WebGL-0x117402724800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[warning] [.WebGL-0x59dc00190800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[warning] [.WebGL-0x59dc00190800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[warning] [.WebGL-0x59dc00190800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[warning] [.WebGL-0x59dc00190800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+>> 本页错误数：0
 
 === 判定 ===
-真实错误数：0
-结论：通过 —— 无红色错误（仅 A-Frame/THREE 版本 info）
+全部页面真实错误数：0
+结论：通过 —— Console 无红色错误
