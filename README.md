@@ -10,6 +10,22 @@
 
 本项目为纯静态站点，**无需构建、无需联网**（所有依赖已本地化）。
 
+### 方式零：在另一台电脑上从克隆到运行（完整步骤）
+
+```bash
+# 1. 安装 Git（git-scm.com）与 Python 3（python.org，勾选 Add to PATH），二者任装其一即可满足运行
+# 2. 克隆仓库
+git clone https://github.com/dht985/end.git navy-hub
+# 3. 进入目录
+cd navy-hub
+# 4. 启动本地静态服务器（推荐）
+python -m http.server 8010
+# 5. 浏览器（Edge/Chrome 均可）打开
+#    http://localhost:8010/
+```
+
+> 若第 4 步无 Python，也可用 Node：`npx serve .`；或直接双击 `index.html` 浏览（部分浏览器本地 fetch 受限时请改用服务器方式）。
+
 ### 方式一：本地服务器（推荐）
 
 ```bash
@@ -103,5 +119,23 @@ navy-hub/
 
 ## 📝 过程文档
 
+**需求与任务管理**
+- [需求分析（问题/对象/模块/设计思路图）](docs/requirements.md)
+- [任务分解、进度与风险](docs/plan.md)
+
+**结构与可用性**
+- [页面结构说明（清单/导航关系/语义化）](docs/structure.md)
+- [可用性设计说明（一致性/操作提示/错误提示）](docs/usability.md)
+
+**交互、数据与可视化**
+- [交互功能清单与数据处理流程](docs/interactions.md)
+- [关键代码说明（2 个核心功能）](docs/key-code.md)
+- [图表清单、数据核验与选型说明](docs/charts.md)
+- [三维展示与主题关联](docs/threed.md)
+
+**质量与反思**
+- [测试记录（12 个用例）](docs/test-report.md)
+- [个人反思与改进计划](docs/reflection.md)
+- [加载性能研究](docs/performance.md)
 - [同伴审查记录](docs/peer-review.md)
 - [轮值协调记录](docs/coordination.md)

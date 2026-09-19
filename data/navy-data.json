@@ -188,16 +188,12 @@
   ],
   "stats": {
     "shipCountByEra": [
-      { "era": "1950s", "count": 2 },
-      { "era": "1970s", "count": 1 },
-      { "era": "1980s", "count": 1 },
-      { "era": "1990s", "count": 1 },
       { "era": "2000s", "count": 3 },
       { "era": "2010s", "count": 6 },
-      { "era": "2020s", "count": 4 }
+      { "era": "2020s", "count": 3 }
     ],
     "displacementByType": [
-      { "type": "航空母舰", "value": 68000 },
+      { "type": "航空母舰", "value": 80000 },
       { "type": "两栖攻击舰", "value": 40000 },
       { "type": "综合补给舰", "value": 48000 },
       { "type": "驱逐舰", "value": 12000 },
